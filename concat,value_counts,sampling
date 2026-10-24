@@ -1,0 +1,19 @@
+import pandas as pd 
+import matplotlib.pyplot as plt
+from sklearn import linear_model 
+dataframe=pd.DataFrame({"reviews":["xyz","zyx","abc","jhk","ysg","cbcb","hsg","jd"],"sentiment":["positive","positive","positive","negative","positive","negative","positive","negative"]})
+pos=dataframe[dataframe["sentiment"]== "positive"][:5]
+neg=dataframe[dataframe["sentiment"]== "negative"][:2]
+newf=pd.concat([pos,neg]) 
+newf.value_counts("sentiment")
+newf.value_counts("sentiment").plot(kind= "bar")
+newf
+n=len(neg)
+pos=pos.sample(n)
+pos
+newf=pd.concat([pos,neg])
+newf
+newf.value_counts("sentiment")
+newf.value_counts("sentiment").plot(kind = "bar")
+http://localhost:8888/notebooks/Untitled6.ipynb
+  
