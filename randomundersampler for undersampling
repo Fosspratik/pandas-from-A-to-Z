@@ -1,0 +1,13 @@
+from imblearn.under_sampling import RandomUnderSampler
+from sklearn import linear_model
+import statsmodels.api as sm
+import pandas as pd 
+import matplotlib.pyplot as plt
+dataframe=pd.DataFrame({"reviews":["xyz","zyx","abc","jhk","ysg","cbcb","hsg","jd"],"sentiment":["positive","positive","positive","negative","positive","negative","positive","negative"]})
+x=dataframe[dataframe["sentiment"]== "positive"][:5]
+y=dataframe[dataframe["sentiment"]== "negative"][:2]
+newf=pd.concat([x,y]) 
+newf
+rus =RandomUnderSampler(random_state=0)
+dataframe2,dataframe2["sentiment"]=rus.fit_resample(dataframe[["reviews"]],dataframe["sentiment"])
+dataframe2
