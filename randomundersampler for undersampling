@@ -11,3 +11,4 @@ newf
 rus =RandomUnderSampler(random_state=0)
 dataframe2,dataframe2["sentiment"]=rus.fit_resample(dataframe[["reviews"]],dataframe["sentiment"])
 dataframe2
+http://localhost:8888/notebooks/Untitled7.ipynb
