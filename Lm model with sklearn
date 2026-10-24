@@ -1,0 +1,6 @@
+from sklearn import linear_model
+x = dataframe[["col1","col2"]]
+y = dataframe["col3"]
+lm=linear_model.LinearRegression()
+lm.fit(x,y)
+http://localhost:8888/notebooks/Untitled5.ipynb
