@@ -6,3 +6,4 @@ y = dataframe["col3"] # dependent variable
 x=sm.add_constant(x)
 lm=sm.OLS(y,x).fit()
 lm.summary()
+http://localhost:8888/doc/tree/Untitled4.ipynb
