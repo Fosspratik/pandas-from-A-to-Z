@@ -1,0 +1,8 @@
+import statsmodels.api as sm
+import pandas as pd 
+dataframe=pd.DataFrame({"col1":[10,20,30,40],"col2":[1,2,3,4],"col3":[100,300,400,500]})
+x = dataframe[["col1","col2"]]  #indpendent variable 
+y = dataframe["col3"] # dependent variable
+x=sm.add_constant(x)
+lm=sm.OLS(y,x).fit()
+lm.summary()
