@@ -1,0 +1,12 @@
+#bag of words # count vectorization
+from sklearn.feature_extraction.text import CountVectorizer
+import pandas as pd
+text = ["i love writing code in python and i love sql","i hate writing java and php hate it"] #list
+text
+df=pd.DataFrame({"reviews":["review1","review2"],"text":text}) #passing the list in text column hence no quotes used or square brackets
+df
+cv=CountVectorizer(stop_words="english") # stop_words ="english" is optional parameter but it removed the words which are like in and etc .
+x=cv.fit_transform(df["text"]) #passed text column for text
+cv_matrix = pd.DataFrame(x.toarray(),index=df["reviews"].values,columns=cv.get_feature_names_out())
+cv_matrix
+http://localhost:8888/notebooks/Untitled9.ipynb
